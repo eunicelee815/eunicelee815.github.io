@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <!-- Primary Meta Tags -->
-  <title>Eunice Lee (Lee Hoi Yung) | Senior Marketing & Growth Leader</title>
-  <meta name="title" content="Eunice Lee (Lee Hoi Yung) | Senior Marketing & Growth Leader" />
+  <!-- Primary Meta Tags (Clean Browser Tab Title) -->
+  <title>Eunice Lee | Senior Marketing & Growth Leader</title>
+  <meta name="title" content="Eunice Lee | Senior Marketing & Growth Leader" />
   <meta name="description" content="9+ years scaling global brands, fintech ecosystems & consumer apps. Driven >$10B volume at First Digital, +277% community growth at ORA Protocol, and $0 CAC app adoption at Helpurr." />
-  <meta name="author" content="Eunice Lee (Lee Hoi Yung)" />
-  <meta name="keywords" content="Eunice Lee, Lee Hoi Yung, Head of Marketing, Growth Marketing, Fintech Marketing, Web3 Marketing, Hong Kong, PR, Brand Strategy" />
-  <meta name="theme-color" content="#18191B" />
+  <meta name="author" content="Eunice Lee" />
+  <meta name="keywords" content="Eunice Lee, Head of Marketing, Growth Marketing, Fintech Marketing, Web3 Marketing, Hong Kong, PR, Brand Strategy" />
+  <meta name="theme-color" content="#141619" />
 
   <!-- Open Graph / LinkedIn / WhatsApp Link Preview -->
   <meta property="og:type" content="website" />
@@ -41,15 +41,14 @@
           fontFamily: { sans: ['Inter', 'sans-serif'] },
           colors: {
             palette: {
-              dark: '#18191B',       // Matte Obsidian / Charcoal Grey (Main Background)
-              darker: '#111214',     // Deepest Carbon (Footer & Contrast)
-              greenBg: '#1E2D24',    // Deep Botanical Sage-Pine (Distinctive Section Background)
-              greenCard: '#26392E',  // Elevated Green Card Surface
-              silver: '#A1A1AA',     // Cool Zinc Grey (Secondary Text)
-              white: '#F4F4F0',      // Warm Alabaster / Off-White (Primary Text)
-              coral: '#78A083',      // Refined Eucalyptus Sage (Primary Accent)
-              coralHover: '#8BB396', // Lighter Sage Hover
-              slate: '#25272B'       // Architectural Slate Grey (Card Surface on Charcoal)
+              dark: '#141619',       // Sleek Obsidian Charcoal (Main Background)
+              darker: '#0D0F11',     // Deep Carbon Contrast
+              silver: '#A1A8B3',     // Cool Slate Silver (Secondary Text)
+              white: '#F8FAFC',      // Crisp Alabaster White (Primary Text)
+              coral: '#34D399',      // Vibrant Emerald Mint (Appealing Primary Green Accent)
+              coralHover: '#10B981', // Rich Emerald Hover
+              coralDark: '#059669',  // Deep Emerald for White Section Buttons
+              slate: '#1F2328'       // Architectural Slate Card Surface
             }
           }
         }
@@ -58,36 +57,75 @@
   </script>
   <style>
     body {
-      background-color: #18191B;
-      color: #F4F4F0;
+      background-color: #141619;
+      color: #F8FAFC;
+      overflow-x: hidden;
     }
     .glass-card {
-      background: rgba(37, 39, 43, 0.75);
-      backdrop-filter: blur(12px);
+      background: rgba(31, 35, 40, 0.78);
+      backdrop-filter: blur(14px);
       border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+    }
+    .glass-card:hover {
+      transform: translateY(-4px);
+    }
+    /* Appealing Rich Emerald-Teal Section Styling */
+    .section-green {
+      background: radial-gradient(circle at 80% 20%, rgba(52, 211, 153, 0.16) 0%, transparent 50%),
+                  linear-gradient(160deg, #0D241E 0%, #123129 50%, #0A1D18 100%);
+      border-top: 1px solid rgba(52, 211, 153, 0.28);
+      border-bottom: 1px solid rgba(52, 211, 153, 0.28);
     }
     .glass-card-green {
-      background: rgba(20, 31, 25, 0.65);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(120, 160, 131, 0.28);
+      background: rgba(13, 33, 27, 0.68);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(52, 211, 153, 0.25);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
     }
-    .section-green {
-      background: linear-gradient(180deg, #1B2921 0%, #213228 50%, #1B2921 100%);
-      border-top: 1px solid rgba(120, 160, 131, 0.3);
-      border-bottom: 1px solid rgba(120, 160, 131, 0.3);
+    .glass-card-green:hover {
+      transform: translateY(-5px);
+      border-color: rgba(52, 211, 153, 0.65);
+      box-shadow: 0 16px 36px -10px rgba(16, 185, 129, 0.28);
     }
     .glass-nav {
-      background: rgba(24, 25, 27, 0.90);
+      background: rgba(20, 22, 25, 0.88);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
     .gradient-text {
-      background: linear-gradient(135deg, #FFFFFF 0%, #D4D4D8 50%, #78A083 100%);
+      background: linear-gradient(135deg, #FFFFFF 0%, #A7F3D0 50%, #34D399 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     .coral-glow {
-      box-shadow: 0 10px 28px -6px rgba(120, 160, 131, 0.35);
+      box-shadow: 0 10px 28px -6px rgba(52, 211, 153, 0.4);
+    }
+
+    /* Chocolate Finance-style Smooth Scroll Reveal Animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px) scale(0.98);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    .delay-100 { transition-delay: 100ms; }
+    .delay-200 { transition-delay: 200ms; }
+    .delay-300 { transition-delay: 300ms; }
+    .delay-400 { transition-delay: 400ms; }
+
+    /* Subtle Floating Animation for Portrait Card */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-7px); }
+    }
+    .float-card {
+      animation: floatSlow 6s ease-in-out infinite;
     }
   </style>
 </head>
@@ -104,10 +142,10 @@
 
       <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-palette-silver">
-        <a href="#impact" class="hover:text-palette-white transition">Impact</a>
-        <a href="#fit-matcher" class="hover:text-palette-white transition">Why Hire Me?</a>
-        <a href="#experience" class="hover:text-palette-white transition">Experience</a>
-        <a href="#events" class="hover:text-palette-white transition">Events & PR</a>
+        <a href="#impact" class="hover:text-palette-coral transition">Impact</a>
+        <a href="#fit-matcher" class="hover:text-palette-coral transition">Why Hire Me?</a>
+        <a href="#experience" class="hover:text-palette-coral transition">Experience</a>
+        <a href="#events" class="hover:text-palette-coral transition">Events & PR</a>
         <a href="#contact" class="px-4 py-2 rounded-full bg-palette-coral text-palette-darker font-bold hover:bg-palette-coralHover transition coral-glow">Let's Talk</a>
       </nav>
 
@@ -143,18 +181,18 @@
     </div>
   </header>
 
-  <!-- Hero Section with Portrait (Charcoal Theme) -->
+  <!-- Hero Section with Portrait -->
   <section class="relative overflow-hidden pt-10 pb-16 md:pt-20 md:pb-24">
     <!-- Subtle Ambient Glows -->
-    <div class="absolute -top-24 -right-24 w-96 h-96 bg-palette-coral/10 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute bottom-0 left-1/4 w-80 h-80 bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-palette-coral/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-1/4 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-6xl mx-auto px-5 sm:px-6 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         
         <!-- Left Column: Copy & CTAs -->
-        <div class="lg:col-span-7">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-palette-slate border border-white/10 text-palette-white text-xs font-medium mb-5">
+        <div class="lg:col-span-7 reveal">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-palette-slate border border-palette-coral/30 text-palette-white text-xs font-medium mb-5">
             <i data-lucide="map-pin" class="w-3.5 h-3.5 text-palette-coral"></i>
             <span>Hong Kong • Immediate Availability • Trilingual (EN / 粵 / 普)</span>
           </div>
@@ -164,7 +202,7 @@
           </h1>
 
           <p class="mt-5 text-base sm:text-lg text-palette-silver leading-relaxed">
-            Hi, I'm <strong class="text-palette-white">Eunice Lee (Lee Hoi Yung)</strong>. I am a Senior Marketing & Communications Leader with 9+ years of experience turning complex tech products, regulated fintech infrastructure, and consumer lifestyle brands into high-converting market leaders.
+            Hi, I'm <strong class="text-palette-white">Eunice Lee</strong>. I am a Senior Marketing & Communications Leader with 9+ years of experience turning complex tech products, regulated fintech infrastructure, and consumer lifestyle brands into high-converting market leaders.
           </p>
 
           <!-- CTA Buttons -->
@@ -173,7 +211,7 @@
               <i data-lucide="linkedin" class="w-4 h-4"></i>
               View LinkedIn Profile
             </a>
-            <button onclick="copyEmail()" id="copyEmailBtn" class="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-palette-slate hover:bg-zinc-700/80 text-palette-white font-medium border border-white/10 transition text-sm">
+            <button onclick="copyEmail()" id="copyEmailBtn" class="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-palette-slate hover:bg-zinc-800 text-palette-white font-medium border border-white/10 transition text-sm">
               <i data-lucide="mail" class="w-4 h-4 text-palette-coral"></i>
               <span>eunicelee815@gmail.com</span>
             </button>
@@ -185,10 +223,10 @@
         </div>
 
         <!-- Right Column: Portrait Image Card -->
-        <div class="lg:col-span-5 flex flex-col items-center lg:items-end">
-          <div class="relative w-64 sm:w-80 group">
+        <div class="lg:col-span-5 flex flex-col items-center lg:items-end reveal delay-200">
+          <div class="relative w-64 sm:w-80 group float-card">
             <!-- Decorative Offset Frame -->
-            <div class="absolute -inset-2.5 rounded-3xl bg-gradient-to-tr from-palette-coral/40 via-zinc-700/30 to-white/20 opacity-50 blur-md group-hover:opacity-75 transition duration-500"></div>
+            <div class="absolute -inset-2.5 rounded-3xl bg-gradient-to-tr from-palette-coral/40 via-emerald-700/20 to-white/20 opacity-60 blur-md group-hover:opacity-85 transition duration-500"></div>
             <div class="absolute inset-0 translate-x-2.5 translate-y-2.5 rounded-3xl border border-palette-coral/50 pointer-events-none"></div>
 
             <!-- Portrait Container -->
@@ -196,17 +234,17 @@
               <img 
                 id="profileImage" 
                 src="IMG_6310.jpg" 
-                alt="Eunice Lee (Lee Hoi Yung)" 
+                alt="Eunice Lee" 
                 class="w-full h-full object-cover object-top transition duration-500 group-hover:scale-105"
                 onerror="this.onerror=null; document.getElementById('photoFallbackHint').classList.remove('hidden');"
               />
               <!-- Bottom Name Overlay Badge -->
               <div class="absolute bottom-3 left-3 right-3 p-3 rounded-2xl bg-palette-darker/85 backdrop-blur-md border border-white/10 flex items-center justify-between">
                 <div>
-                  <p class="text-xs sm:text-sm font-bold text-palette-white">Eunice Lee (Lee Hoi Yung)</p>
+                  <p class="text-xs sm:text-sm font-bold text-palette-white">Eunice Lee</p>
                   <p class="text-[11px] text-palette-silver">Senior Marketing & Comms Leader</p>
                 </div>
-                <span class="px-2.5 py-0.5 rounded-full bg-palette-coral/20 border border-palette-coral/50 text-palette-white text-[11px] font-semibold">HK</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-palette-coral/20 border border-palette-coral/50 text-palette-coral text-[11px] font-bold">HK</span>
               </div>
             </div>
 
@@ -224,55 +262,55 @@
       </div>
 
       <!-- Brand Ribbon with Company Logos -->
-      <div class="mt-14 pt-8 border-t border-white/10">
+      <div class="mt-14 pt-8 border-t border-white/10 reveal delay-300">
         <p class="text-xs uppercase tracking-widest text-palette-silver font-semibold mb-4">
           Proven Track Record Across Industry Leaders
         </p>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-3">
           
-          <div class="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-palette-slate/80 border border-white/10 hover:border-palette-coral/60 transition">
+          <div class="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-palette-slate/80 border border-white/10 hover:border-palette-coral/60 hover:-translate-y-0.5 transition">
             <div class="w-7 h-7 rounded-lg bg-white p-1 flex items-center justify-center shrink-0 shadow-sm">
               <img src="https://www.google.com/s2/favicons?domain=firstdigitallabs.com&sz=128" alt="First Digital" class="w-full h-full object-contain" />
             </div>
             <span class="text-xs font-semibold text-palette-white truncate">First Digital</span>
           </div>
 
-          <div class="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-palette-slate/80 border border-white/10 hover:border-palette-coral/60 transition">
+          <div class="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-palette-slate/80 border border-white/10 hover:border-palette-coral/60 hover:-translate-y-0.5 transition">
             <div class="w-7 h-7 rounded-lg bg-white p-1 flex items-center justify-center shrink-0 shadow-sm">
               <img src="https://www.google.com/s2/favicons?domain=ora.io&sz=128" alt="ORA Protocol" class="w-full h-full object-contain" />
             </div>
             <span class="text-xs font-semibold text-palette-white truncate">ORA Protocol</span>
           </div>
 
-          <div class="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-palette-slate/80 border border-white/10 hover:border-palette-coral/60 transition">
+          <div class="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-palette-slate/80 border border-white/10 hover:border-palette-coral/60 hover:-translate-y-0.5 transition">
             <div class="w-7 h-7 rounded-lg bg-white p-1 flex items-center justify-center shrink-0 shadow-sm">
               <img src="https://www.google.com/s2/favicons?domain=casetify.com&sz=128" alt="CASETiFY" class="w-full h-full object-contain" />
             </div>
             <span class="text-xs font-semibold text-palette-white truncate">CASETiFY</span>
           </div>
 
-          <div class="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-palette-slate/80 border border-white/10 hover:border-palette-coral/60 transition">
+          <div class="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-palette-slate/80 border border-white/10 hover:border-palette-coral/60 hover:-translate-y-0.5 transition">
             <div class="w-7 h-7 rounded-lg bg-white p-1 flex items-center justify-center shrink-0 shadow-sm">
               <img src="https://www.google.com/s2/favicons?domain=scmp.com&sz=128" alt="SCMP" class="w-full h-full object-contain" />
             </div>
             <span class="text-xs font-semibold text-palette-white truncate">SCMP</span>
           </div>
 
-          <div class="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-palette-slate/80 border border-white/10 hover:border-palette-coral/60 transition">
+          <div class="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-palette-slate/80 border border-white/10 hover:border-palette-coral/60 hover:-translate-y-0.5 transition">
             <div class="w-7 h-7 rounded-lg bg-white p-1 flex items-center justify-center shrink-0 shadow-sm">
               <img src="https://www.google.com/s2/favicons?domain=flash-coffee.com&sz=128" alt="Flash Coffee" class="w-full h-full object-contain" />
             </div>
             <span class="text-xs font-semibold text-palette-white truncate">Flash Coffee</span>
           </div>
 
-          <div class="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-palette-slate/80 border border-white/10 hover:border-palette-coral/60 transition">
+          <div class="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-palette-slate/80 border border-white/10 hover:border-palette-coral/60 hover:-translate-y-0.5 transition">
             <div class="w-7 h-7 rounded-lg bg-white p-1 flex items-center justify-center shrink-0 shadow-sm">
               <img src="https://www.google.com/s2/favicons?domain=deliveroo.hk&sz=128" alt="Deliveroo" class="w-full h-full object-contain" />
             </div>
             <span class="text-xs font-semibold text-palette-white truncate">Deliveroo</span>
           </div>
 
-          <div class="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-palette-slate/80 border border-white/10 hover:border-palette-coral/60 transition">
+          <div class="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-palette-slate/80 border border-white/10 hover:border-palette-coral/60 hover:-translate-y-0.5 transition">
             <div class="w-7 h-7 rounded-lg bg-white p-1 flex items-center justify-center shrink-0 shadow-sm">
               <img src="https://www.google.com/s2/favicons?domain=helpurr.app&sz=128" alt="Helpurr" class="w-full h-full object-contain" />
             </div>
@@ -284,60 +322,59 @@
     </div>
   </section>
 
-  <!-- Key Metrics Dashboard (BOTANICAL SAGE-PINE GREEN SECTION) -->
+  <!-- Key Metrics Dashboard (VIBRANT EMERALD-TEAL GREEN SECTION) -->
   <section id="impact" class="py-16 sm:py-20 section-green relative overflow-hidden">
-    <div class="absolute top-0 right-1/3 w-96 h-96 bg-palette-coral/10 rounded-full blur-3xl pointer-events-none"></div>
     <div class="max-w-6xl mx-auto px-5 sm:px-6 relative z-10">
-      <div class="mb-9">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-palette-coral/20 border border-palette-coral/40 text-xs font-bold uppercase tracking-widest text-palette-white">
-          <i data-lucide="trending-up" class="w-3.5 h-3.5 text-palette-coral"></i> Performance Highlights
+      <div class="mb-9 reveal">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-palette-coral/20 border border-palette-coral/40 text-xs font-bold uppercase tracking-widest text-palette-coral">
+          <i data-lucide="trending-up" class="w-3.5 h-3.5"></i> Performance Highlights
         </span>
         <h2 class="text-2xl sm:text-3xl font-bold text-palette-white mt-2.5">Quantifiable Growth & Impact</h2>
-        <p class="text-palette-silver text-sm mt-1">Capital-efficient acquisition, multi-billion-dollar liquidity expansion, and high-ROI execution.</p>
+        <p class="text-emerald-100/75 text-sm mt-1">Capital-efficient acquisition, multi-billion-dollar liquidity expansion, and high-ROI execution.</p>
       </div>
 
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
-        <div class="glass-card-green p-5 sm:p-6 rounded-2xl hover:border-palette-coral transition shadow-lg">
+        <div class="glass-card-green p-5 sm:p-6 rounded-2xl shadow-lg reveal delay-100">
           <div class="text-palette-coral text-[11px] font-bold uppercase tracking-wider mb-1.5">Ecosystem Volume</div>
           <div class="text-3xl sm:text-4xl font-extrabold text-palette-white">>$10B</div>
           <div class="text-xs sm:text-sm text-palette-white font-semibold mt-1.5">Trading Volume Driven</div>
-          <p class="text-xs text-palette-silver/90 mt-1 hidden sm:block">Expanded FDUSD across 6 chains at First Digital.</p>
+          <p class="text-xs text-emerald-100/70 mt-1 hidden sm:block">Expanded FDUSD across 6 chains at First Digital.</p>
         </div>
 
-        <div class="glass-card-green p-5 sm:p-6 rounded-2xl hover:border-palette-coral transition shadow-lg">
+        <div class="glass-card-green p-5 sm:p-6 rounded-2xl shadow-lg reveal delay-200">
           <div class="text-palette-coral text-[11px] font-bold uppercase tracking-wider mb-1.5">Community Scale</div>
           <div class="text-3xl sm:text-4xl font-extrabold text-palette-white">+277%</div>
           <div class="text-xs sm:text-sm text-palette-white font-semibold mt-1.5">Social Growth (301K)</div>
-          <p class="text-xs text-palette-silver/90 mt-1 hidden sm:block">6.32M impressions & +350% active users at Ora.</p>
+          <p class="text-xs text-emerald-100/70 mt-1 hidden sm:block">6.32M impressions & +350% active users at Ora.</p>
         </div>
 
-        <div class="glass-card-green p-5 sm:p-6 rounded-2xl hover:border-palette-coral transition shadow-lg">
+        <div class="glass-card-green p-5 sm:p-6 rounded-2xl shadow-lg reveal delay-300">
           <div class="text-palette-coral text-[11px] font-bold uppercase tracking-wider mb-1.5">Organic App Growth</div>
           <div class="text-3xl sm:text-4xl font-extrabold text-palette-white">$0 CAC</div>
           <div class="text-xs sm:text-sm text-palette-white font-semibold mt-1.5">6.8K+ Active Users</div>
-          <p class="text-xs text-palette-silver/90 mt-1 hidden sm:block">80.6% engagement rate in North America at Helpurr.</p>
+          <p class="text-xs text-emerald-100/70 mt-1 hidden sm:block">80.6% engagement rate in North America at Helpurr.</p>
         </div>
 
-        <div class="glass-card-green p-5 sm:p-6 rounded-2xl hover:border-palette-coral transition shadow-lg">
+        <div class="glass-card-green p-5 sm:p-6 rounded-2xl shadow-lg reveal delay-400">
           <div class="text-palette-coral text-[11px] font-bold uppercase tracking-wider mb-1.5">Funnel ROI</div>
           <div class="text-3xl sm:text-4xl font-extrabold text-palette-white">3.21x</div>
           <div class="text-xs sm:text-sm text-palette-white font-semibold mt-1.5">ROAS & +300% Retention</div>
-          <p class="text-xs text-palette-silver/90 mt-1 hidden sm:block">21% subscriber win-back & 16% churn reduction at SCMP.</p>
+          <p class="text-xs text-emerald-100/70 mt-1 hidden sm:block">21% subscriber win-back & 16% churn reduction at SCMP.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Concise, Mobile-Friendly Interactive Recruiter Matcher (Charcoal Theme) -->
+  <!-- Concise, Mobile-Friendly Interactive Recruiter Matcher -->
   <section id="fit-matcher" class="py-16 sm:py-20 border-b border-white/10">
     <div class="max-w-6xl mx-auto px-5 sm:px-6">
-      <div class="mb-6">
+      <div class="mb-6 reveal">
         <span class="text-xs font-bold uppercase tracking-widest text-palette-coral">Interactive Recruiter Tool</span>
         <h2 class="text-2xl sm:text-3xl font-bold text-palette-white mt-1">Select Your Sector to See How I Deliver Value</h2>
       </div>
 
       <!-- Compact Sector Pill Tabs -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 mb-6">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 mb-6 reveal delay-100">
         <button onclick="selectPersona('fintech')" id="btn-fintech" class="persona-btn px-4 py-3 rounded-xl font-bold text-xs sm:text-sm transition text-left sm:text-center bg-palette-coral text-palette-darker coral-glow">
           🏦 Fintech & Web3
         </button>
@@ -350,16 +387,16 @@
       </div>
 
       <!-- Streamlined Dynamic Persona Card -->
-      <div id="persona-display" class="glass-card rounded-2xl p-5 sm:p-7 border border-palette-coral/40">
+      <div id="persona-display" class="glass-card rounded-2xl p-5 sm:p-7 border border-palette-coral/40 reveal delay-200">
         <!-- Populated by JS -->
       </div>
     </div>
   </section>
 
-  <!-- Interactive Experience Timeline (Charcoal Theme) -->
+  <!-- Interactive Experience Timeline -->
   <section id="experience" class="py-16 sm:py-20">
     <div class="max-w-6xl mx-auto px-5 sm:px-6">
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 reveal">
         <div>
           <span class="text-xs font-bold uppercase tracking-widest text-palette-coral">Track Record</span>
           <h2 class="text-2xl sm:text-3xl font-bold text-palette-white mt-1">Career Journey (9+ Years)</h2>
@@ -381,43 +418,44 @@
     </div>
   </section>
 
-  <!-- Flagship Events, PR & Partnerships (BOTANICAL SAGE-PINE GREEN SECTION) -->
+  <!-- Flagship Events, PR & Partnerships (VIBRANT EMERALD-TEAL GREEN SECTION) -->
   <section id="events" class="py-16 sm:py-20 section-green relative overflow-hidden">
-    <div class="absolute -bottom-24 left-1/4 w-96 h-96 bg-palette-coral/10 rounded-full blur-3xl pointer-events-none"></div>
     <div class="max-w-6xl mx-auto px-5 sm:px-6 relative z-10">
-      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-palette-coral/20 border border-palette-coral/40 text-xs font-bold uppercase tracking-widest text-palette-white">
-        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-palette-coral"></i> Core Pillars
-      </span>
-      <h2 class="text-2xl sm:text-3xl font-bold text-palette-white mt-2.5 mb-2">Marquee Events, Tier-1 PR & Global Partnerships</h2>
-      <p class="text-palette-silver text-sm mb-9">From 1,000+ attendee conferences and C-suite keynotes to blue-chip brand collaborations.</p>
+      <div class="reveal">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-palette-coral/20 border border-palette-coral/40 text-xs font-bold uppercase tracking-widest text-palette-coral">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Core Pillars
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-palette-white mt-2.5 mb-2">Marquee Events, Tier-1 PR & Global Partnerships</h2>
+        <p class="text-emerald-100/75 text-sm mb-9">From 1,000+ attendee conferences and C-suite keynotes to blue-chip brand collaborations.</p>
+      </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-        <div class="glass-card-green p-6 rounded-2xl hover:border-palette-coral transition shadow-lg">
+        <div class="glass-card-green p-6 rounded-2xl shadow-lg reveal delay-100">
           <div class="w-10 h-10 rounded-xl bg-palette-coral/20 border border-palette-coral/40 flex items-center justify-center text-palette-coral mb-4">
             <i data-lucide="globe" class="w-5 h-5"></i>
           </div>
           <h3 class="font-bold text-lg text-palette-white">Global Summits & Activations</h3>
-          <p class="text-sm text-palette-silver/95 mt-2 leading-relaxed">
+          <p class="text-sm text-emerald-50/80 mt-2 leading-relaxed">
             Directed end-to-end event strategy, sponsorships, and C-suite speaking engagements at <strong class="text-palette-white">TOKEN2049, Binance Blockchain Week, and Stablecoin Summit</strong>. Co-hosted the <strong class="text-palette-white">Ethereum x AI Confluence</strong> at Singapore ArtScience Museum (1,000+ attendees) and cultural activations at <strong class="text-palette-white">Clockenflap</strong>.
           </p>
         </div>
 
-        <div class="glass-card-green p-6 rounded-2xl hover:border-palette-coral transition shadow-lg">
+        <div class="glass-card-green p-6 rounded-2xl shadow-lg reveal delay-200">
           <div class="w-10 h-10 rounded-xl bg-palette-coral/20 border border-palette-coral/40 flex items-center justify-center text-palette-coral mb-4">
             <i data-lucide="newspaper" class="w-5 h-5"></i>
           </div>
           <h3 class="font-bold text-lg text-palette-white">Tier-1 PR & Crisis Comms</h3>
-          <p class="text-sm text-palette-silver/95 mt-2 leading-relaxed">
+          <p class="text-sm text-emerald-50/80 mt-2 leading-relaxed">
             Secured high-profile editorial features across <strong class="text-palette-white">CoinDesk, CNBC, Business Times, and World Ledger</strong>. Engineered executive thought-leadership ("The Flow" newsletter highlighting $1.6B inflows) and led sensitive legal/regulatory crisis communications to protect institutional trust.
           </p>
         </div>
 
-        <div class="glass-card-green p-6 rounded-2xl hover:border-palette-coral transition shadow-lg">
+        <div class="glass-card-green p-6 rounded-2xl shadow-lg reveal delay-300">
           <div class="w-10 h-10 rounded-xl bg-palette-coral/20 border border-palette-coral/40 flex items-center justify-center text-palette-coral mb-4">
             <i data-lucide="handshake" class="w-5 h-5"></i>
           </div>
           <h3 class="font-bold text-lg text-palette-white">Blue-Chip Brand Partnerships</h3>
-          <p class="text-sm text-palette-silver/95 mt-2 leading-relaxed">
+          <p class="text-sm text-emerald-50/80 mt-2 leading-relaxed">
             Orchestrated official phygital collaborations at CASETiFY (<strong class="text-palette-white">One Piece, Yuga Labs ApeFest, Mocaverse, Phanta Bear by Jay Chou</strong>) and zero-cost retail co-marketing at Flash Coffee with <strong class="text-palette-white">Universal Pictures & Lane Eight</strong>.
           </p>
         </div>
@@ -425,58 +463,60 @@
     </div>
   </section>
 
-  <!-- Recruiter Quick-Facts & Contact Footer (Charcoal Theme) -->
-  <section id="contact" class="py-16 sm:py-20">
+  <!-- Recruiter Quick-Facts & Contact Footer (CRISP WHITE HIGH-CONTRAST SECTION) -->
+  <section id="contact" class="py-16 sm:py-24 bg-white text-slate-900">
     <div class="max-w-6xl mx-auto px-5 sm:px-6">
-      <div class="glass-card rounded-3xl p-6 sm:p-10 border border-white/15 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div class="rounded-3xl p-6 sm:p-10 bg-slate-50 border border-slate-200/90 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center reveal">
         <div class="lg:col-span-7">
-          <span class="text-xs font-bold uppercase tracking-widest text-palette-coral">Ready for Next Challenge</span>
-          <h2 class="text-2xl sm:text-3xl font-bold text-palette-white mt-2">Let's Build Your Next Growth Chapter</h2>
-          <p class="text-palette-silver text-sm sm:text-base mt-3 leading-relaxed">
-            Whether you are looking for a <strong class="text-palette-white">Head of Marketing, Senior Marketing Manager, or International Comms & Growth Lead</strong>, I bring immediate execution velocity, cross-functional leadership, and AI-enabled workflow efficiency.
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-widest">
+            <span class="w-2 h-2 rounded-full bg-emerald-600 animate-ping"></span> Ready for Next Challenge
+          </span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">Let's Build Your Next Growth Chapter</h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
+            Whether you are looking for a <strong class="text-slate-900">Head of Marketing, Senior Marketing Manager, or International Comms & Growth Lead</strong>, I bring immediate execution velocity, cross-functional leadership, and AI-enabled workflow efficiency.
           </p>
-          <div class="mt-6 flex flex-wrap gap-3.5">
-            <a href="mailto:eunicelee815@gmail.com" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-palette-coral text-palette-darker font-bold hover:bg-palette-coralHover transition coral-glow text-sm">
+          <div class="mt-7 flex flex-wrap gap-3.5">
+            <a href="mailto:eunicelee815@gmail.com" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-600 text-white font-bold hover:bg-emerald-700 transition shadow-lg shadow-emerald-600/25 text-sm sm:text-base">
               <i data-lucide="send" class="w-4 h-4"></i>
               Email Eunice Directly
             </a>
-            <a href="https://www.linkedin.com/in/eunicelee815" target="_blank" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-palette-slate hover:bg-zinc-700 text-palette-white font-medium border border-white/15 transition text-sm">
-              <i data-lucide="linkedin" class="w-4 h-4 text-palette-coral"></i>
+            <a href="https://www.linkedin.com/in/eunicelee815" target="_blank" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white hover:bg-slate-100 text-slate-800 font-semibold border border-slate-300 transition shadow-sm text-sm sm:text-base">
+              <i data-lucide="linkedin" class="w-4 h-4 text-emerald-600"></i>
               linkedin.com/in/eunicelee815
             </a>
           </div>
         </div>
 
-        <!-- Recruiter At-A-Glance Box -->
-        <div class="lg:col-span-5 bg-palette-darker p-5 sm:p-6 rounded-2xl border border-white/10 space-y-2.5 text-xs sm:text-sm">
-          <div class="font-bold text-palette-white pb-2 border-b border-white/10 flex items-center justify-between">
+        <!-- Recruiter At-A-Glance Box (Clean White Card) -->
+        <div class="lg:col-span-5 bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2.5 text-xs sm:text-sm">
+          <div class="font-bold text-slate-900 pb-2.5 border-b border-slate-100 flex items-center justify-between">
             <span>Recruiter Quick Reference</span>
-            <span class="text-xs px-2.5 py-0.5 rounded-full bg-palette-coral/20 text-palette-coral border border-palette-coral/40">Active</span>
+            <span class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-semibold">Active</span>
           </div>
           <div class="flex justify-between py-1">
-            <span class="text-palette-silver">Location:</span>
-            <span class="font-medium text-palette-white">Hong Kong</span>
+            <span class="text-slate-500">Location:</span>
+            <span class="font-semibold text-slate-900">Hong Kong</span>
           </div>
           <div class="flex justify-between py-1">
-            <span class="text-palette-silver">Experience:</span>
-            <span class="font-medium text-palette-white">9+ Years Full-Time</span>
+            <span class="text-slate-500">Experience:</span>
+            <span class="font-semibold text-slate-900">9+ Years Full-Time</span>
           </div>
           <div class="flex justify-between py-1">
-            <span class="text-palette-silver">Languages:</span>
-            <span class="font-medium text-palette-white">English, Cantonese, Putonghua</span>
+            <span class="text-slate-500">Languages:</span>
+            <span class="font-semibold text-slate-900">English, Cantonese, Putonghua</span>
           </div>
           <div class="flex justify-between py-1">
-            <span class="text-palette-silver">Availability:</span>
-            <span class="font-medium text-palette-coral">Immediate</span>
+            <span class="text-slate-500">Availability:</span>
+            <span class="font-bold text-emerald-600">Immediate</span>
           </div>
           <div class="flex justify-between py-1">
-            <span class="text-palette-silver">Core Tools:</span>
-            <span class="font-medium text-palette-white text-right">Mixpanel, AI Workflows, ASO, PR</span>
+            <span class="text-slate-500">Core Tools:</span>
+            <span class="font-semibold text-slate-900 text-right">Mixpanel, AI Workflows, ASO, PR</span>
           </div>
         </div>
       </div>
 
-      <footer class="mt-12 text-center text-xs text-palette-silver">
+      <footer class="mt-12 text-center text-xs text-slate-500 font-medium">
         © 2026 Eunice Lee (Lee Hoi Yung). Built as an interactive portfolio for recruiters & hiring teams.
       </footer>
     </div>
@@ -484,6 +524,19 @@
 
   <!-- Interactive JavaScript -->
   <script>
+    // Smooth Scroll Reveal Observer (Chocolate Finance-inspired spring reveal)
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+
+    function observeElements() {
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    }
+
     // Mobile Menu Toggle Logic
     function toggleMobileMenu() {
       const menu = document.getElementById('mobileMenu');
@@ -680,7 +733,7 @@
           </div>
           <div class="lg:col-span-5 grid grid-cols-3 gap-2.5 pt-3 lg:pt-0 border-t lg:border-t-0 border-white/10">
             ${data.stats.map(s => `
-              <div class="bg-palette-darker p-3 sm:p-4 rounded-xl border border-white/10 text-center flex flex-col items-center justify-center">
+              <div class="bg-palette-darker p-3 sm:p-4 rounded-xl border border-white/10 text-center flex flex-col items-center justify-center hover:border-palette-coral/40 transition">
                 <i data-lucide="${s.icon}" class="w-4 h-4 text-palette-coral mb-1.5"></i>
                 <div class="text-sm sm:text-base font-extrabold text-palette-white leading-tight">${s.value}</div>
                 <div class="text-[10px] sm:text-[11px] text-palette-silver mt-1">${s.label}</div>
@@ -700,8 +753,8 @@
 
       const filtered = tag === 'all' ? experiences : experiences.filter(e => e.tags.includes(tag));
       const container = document.getElementById('experience-list');
-      container.innerHTML = filtered.map(exp => `
-        <div class="glass-card p-5 sm:p-6 rounded-2xl hover:border-palette-coral/50 transition">
+      container.innerHTML = filtered.map((exp, idx) => `
+        <div class="glass-card p-5 sm:p-6 rounded-2xl hover:border-palette-coral/50 transition reveal" style="transition-delay: ${Math.min(idx * 60, 240)}ms">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3.5 border-b border-white/10">
             <div class="flex items-center gap-3">
               <div class="w-9 h-9 rounded-xl bg-white p-1.5 flex items-center justify-center shrink-0 shadow">
@@ -710,7 +763,7 @@
               <div>
                 <div class="flex items-center gap-2.5 flex-wrap">
                   <h3 class="text-base sm:text-lg font-bold text-palette-white">${exp.company}</h3>
-                  <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-palette-coral/15 text-palette-coral border border-palette-coral/40 font-medium">${exp.badge}</span>
+                  <span class="text-[11px] px-2.5 py-0.5 rounded-full bg-palette-coral/15 text-palette-coral border border-palette-coral/40 font-semibold">${exp.badge}</span>
                 </div>
                 <p class="text-xs sm:text-sm font-medium text-palette-silver mt-0.5">${exp.role}</p>
               </div>
@@ -725,6 +778,8 @@
           </ul>
         </div>
       `).join('');
+
+      observeElements();
     }
 
     function copyEmail() {
@@ -752,6 +807,7 @@
     // Initialize defaults
     selectPersona('fintech');
     filterExp('all');
+    observeElements();
     lucide.createIcons();
   </script>
 </body>
